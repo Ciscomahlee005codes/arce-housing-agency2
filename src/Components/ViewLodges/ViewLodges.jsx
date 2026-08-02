@@ -5,7 +5,7 @@ import { Swiper as ListingSwiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
 import PropertyCard from "../PropertyCard/PropertyCard";
-import PropertyCardSkeleton from "../PropertyCard/PropertyCardSkeleton";
+import PropertyCardSkeleton from "../PropertyCard/Propertycardskeleton";
 
 import "swiper/css";
 import "swiper/css/navigation";
