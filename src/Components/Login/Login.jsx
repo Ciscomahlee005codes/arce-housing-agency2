@@ -5,7 +5,7 @@ import { IoEye, IoEyeOff } from "react-icons/io5";
 import toast from "react-hot-toast";
 import ARCELOGO from "../../assets/ARCE-Logo11.png";
 import "./Login.css";
-import { UserAuth } from "../../Context/AuthContext";
+import { UserAuth } from "../../context/AuthContext";
 
 // ── Role → dashboard route ────────────────────────────────────────────────────
 const ROLE_ROUTES = {
