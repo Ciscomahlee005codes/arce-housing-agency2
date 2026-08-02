@@ -1,0 +1,147 @@
+.saved-properties-page {
+  min-height: 100vh;
+  background: #f7f8fc;
+  padding: 90px 16px 30px;
+}
+
+.saved-properties-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.saved-properties-container h2 {
+  margin-bottom: 24px;
+  color: #160053;
+}
+
+.saved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.saved-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.05);
+
+  transition: 0.2s ease;
+}
+
+.saved-card:hover {
+  transform: translateY(-4px);
+}
+
+.saved-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.saved-info {
+  padding: 18px;
+}
+
+.saved-info h3 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.saved-info p {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.saved-info span {
+  color: #160053;
+  font-weight: 700;
+}
+.saved-view-btn {
+  margin-top: 12px;
+  width: 100%;
+  border: none;
+  background: #13118a;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.saved-view-btn:hover {
+  background: #0066ff;
+}
+.saved-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.saved-header h2 {
+  color: #160053;
+  margin: 0;
+}
+
+.saved-count {
+  background: #13118a;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.saved-loading {
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.empty-state {
+  background: white;
+  border-radius: 24px;
+  padding: 60px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  color: #160053;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.empty-state p {
+  max-width: 500px;
+  margin: 0 auto 24px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.browse-btn {
+  border: none;
+  background: #13118a;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.browse-btn:hover {
+  background: #0066ff;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,490 @@
+/* ── Page ─────────────────────────────────────────────────────────────────── */
+.aum-page {
+  padding: 1.75rem 2rem 3rem;
+  background: #f5f6fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #1a1a2e;
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+.aum-page-header {
+  margin-bottom: 1.5rem;
+}
+
+.aum-page-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 4px;
+}
+
+.aum-page-sub {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ── Section tabs: Tenants / Students / Agents ────────────────────────────── */
+.aum-section-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.aum-section-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: 1.5px solid #e5e7eb;
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.aum-section-tab:hover {
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+.aum-section-tab-active {
+  border-color: var(--tab-accent, #6366f1);
+  background: #fff;
+  color: #0f172a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.aum-tab-icon { display: flex; align-items: center; }
+
+.aum-tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0 5px;
+  transition: all 0.2s;
+}
+
+/* ── Controls ─────────────────────────────────────────────────────────────── */
+.aum-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.aum-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px 12px;
+  flex: 1;
+  max-width: 320px;
+  min-width: 180px;
+  transition: border-color 0.2s;
+}
+
+.aum-search:focus-within { border-color: #6366f1; }
+
+.aum-search-icon { color: #9ca3af; flex-shrink: 0; }
+
+.aum-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.82rem;
+  color: #1a1a2e;
+}
+
+.aum-search input::placeholder { color: #b0b6c3; }
+
+.aum-status-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.aum-filter-icon { color: #9ca3af; }
+
+.aum-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1.5px solid #e5e7eb;
+  background: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.aum-pill:hover { border-color: #d1d5db; color: #374151; }
+
+.aum-pill-active {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #fff;
+}
+
+.aum-pill-count {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.2);
+  padding: 1px 5px;
+  border-radius: 999px;
+}
+
+.aum-pill:not(.aum-pill-active) .aum-pill-count {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* ── Table wrapper ────────────────────────────────────────────────────────── */
+.aum-table-wrap {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ── Empty state ── */
+.aum-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 4rem 2rem;
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+/* ── Desktop table ─────────────────────────────────────────────────────────── */
+.aum-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.aum-table thead tr {
+  background: #f8f9fc;
+  border-bottom: 1.5px solid #e5e7eb;
+}
+
+.aum-table th {
+  text-align: left;
+  padding: 11px 16px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.aum-row {
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.15s;
+}
+
+.aum-row:last-child { border-bottom: none; }
+.aum-row:hover { background: #fafafe; }
+
+.aum-table td {
+  padding: 12px 16px;
+  vertical-align: middle;
+}
+
+/* ── User cell ── */
+.aum-user-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aum-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.aum-user-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 2px;
+  white-space: nowrap;
+}
+
+.aum-user-id {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.aum-email  { font-size: 0.8rem; color: #6b7280; }
+.aum-joined { font-size: 0.8rem; color: #9ca3af; white-space: nowrap; }
+
+/* ── Status badge ── */
+.aum-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.aum-badge-active  { background: #dcfce7; color: #166534; }
+.aum-badge-blocked { background: #fee2e2; color: #991b1b; }
+.aum-badge-pending { background: #fef9c3; color: #b45309; }
+
+/* ── Actions ── */
+.aum-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.aum-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.aum-btn-block   { background: #fee2e2; color: #dc2626; }
+.aum-btn-block:hover { background: #fecaca; }
+
+.aum-btn-unblock { background: #dcfce7; color: #16a34a; }
+.aum-btn-unblock:hover { background: #bbf7d0; }
+
+.aum-btn-approve { background: #dbeafe; color: #1d4ed8; }
+.aum-btn-approve:hover { background: #bfdbfe; }
+
+.aum-btn-decline { background: #f3f4f6; color: #6b7280; }
+.aum-btn-decline:hover { background: #e5e7eb; }
+
+.aum-btn-reset   { background: #f3f4f6; color: #374151; }
+.aum-btn-reset:hover { background: #e5e7eb; }
+
+.aum-action-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  border: 1.5px solid #e5e7eb;
+  background: #fff;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.aum-action-icon:hover { background: #f3f4f6; color: #374151; border-color: #d1d5db; }
+
+/* ── Mobile cards ─────────────────────────────────────────────────────────── */
+.aum-mobile-cards { display: none; }
+
+.aum-mobile-card {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.aum-mobile-card:last-child { border-bottom: none; }
+
+.aum-mobile-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.aum-mobile-meta {
+  display: flex;
+  gap: 14px;
+  font-size: 0.72rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.aum-mobile-actions { gap: 8px; }
+
+/* ── Detail modal ─────────────────────────────────────────────────────────── */
+.aum-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.aum-modal {
+  background: #fff;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.aum-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.aum-modal-header button {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.aum-modal-header button:hover { background: #f3f4f6; color: #374151; }
+
+.aum-modal-body { padding: 1.25rem; }
+
+.aum-modal-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.aum-modal-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.aum-modal-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 3px;
+}
+
+.aum-modal-email {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin: 0 0 8px;
+}
+
+.aum-modal-rows { display: flex; flex-direction: column; gap: 0; }
+
+.aum-modal-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.82rem;
+}
+
+.aum-modal-row:last-child { border-bottom: none; }
+.aum-modal-row span  { color: #9ca3af; }
+.aum-modal-row strong { color: #0f172a; font-weight: 700; }
+
+.aum-modal-footer {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #f3f4f6;
+}
+.aum-avatar-fallback {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.aum-loading {
+  padding: 70px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.aum-spinner {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 4px solid rgba(99, 102, 241, 0.15);
+  border-top: 4px solid #6366f1;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .aum-table { display: none; }
+  .aum-mobile-cards { display: block; }
+  .aum-controls { flex-direction: column; align-items: stretch; }
+  .aum-search { max-width: 100%; }
+}
+
+@media (max-width: 540px) {
+  .aum-page { padding: 1.25rem 1rem 3rem; }
+  .aum-section-tabs { gap: 8px; }
+  .aum-section-tab { padding: 8px 14px; font-size: 0.8rem; }
+}

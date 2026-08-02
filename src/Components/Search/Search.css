@@ -1,0 +1,333 @@
+/* =============================================
+   Search — Command-Palette UI
+   Font: Syne (display) + DM Sans (body)
+   Theme: Brand blue / white, sharp & flat
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary: #13118a;
+  --primary-light: #2f2dc4;
+  --primary-hover: #0f0e6e;
+
+  --white: #ffffff;
+  --off-white: #f8f9ff;
+
+  --text-dark: #1e1e2f;
+  --text-light: #6b7280;
+
+  --border: #dbe1ff;
+  --border-light: #eef2ff;
+
+  --glass: rgba(19, 17, 138, 0.05);
+  --glass-border: rgba(19, 17, 138, 0.15);
+
+  --dropdown-bg: #ffffff;
+  --hover-row: rgba(19, 17, 138, 0.05);
+
+  --radius-pill: 100px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+
+  --transition: all 0.25s ease;
+  --shadow-lift: 0 12px 30px rgba(19, 17, 138, 0.12);
+}
+
+/* ─── Wrapper ─── */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  font-family: 'DM Sans', sans-serif;
+  padding-top: 8px;
+  
+}
+
+/* ─── Search Bar ─── */
+.searchBar {
+  width: 90%;
+  max-width: 640px;
+  display: flex;
+  align-items: stretch;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-lift);
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+  z-index: 10;
+   margin-bottom: 25px;
+   margin-top: 50px;
+}
+
+.searchBar:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(19, 17, 138, 0.12);
+}
+
+/* Filter toggle button */
+.filter-icon-button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.filter-icon-button:hover {
+  background: rgba(19, 17, 138, 0.05);
+}
+.filter-icon-button:active {
+   color: var(--primary-hover);
+}
+
+/* Input */
+.searchBar input {
+  flex: 1;
+  padding: 17px 18px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.searchBar input::placeholder {
+  color: var(--text-light);
+}
+
+/* Search icon button */
+.search-pic {
+  background: var(--primary);
+  color: white;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-pic:hover {
+  background: var(--primary-hover);
+}
+
+/* ─── Filter Chips Row ─── */
+.category-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.category-button {
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--primary);
+  padding: 8px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.category-button:hover {
+  background: rgba(19, 17, 138, 0.05);
+  border-color: var(--primary);
+}
+
+.category-button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ─── Dropdown ─── */
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  width: 90%;
+  max-width: 640px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lift);
+  list-style: none;
+  padding: 6px;
+  margin: 0;
+  z-index: 999;
+  overflow-y: auto;
+  max-height: 380px;
+  animation: dropIn 0.18s ease;
+}
+
+.search-dropdown::-webkit-scrollbar {
+  width: 4px;
+}
+.search-dropdown::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 4px;
+}
+
+/* Dropdown item */
+.search-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-dropdown-item:hover {
+  background: var(--hover-row);
+}
+
+.search-dropdown-item:hover .dropdown-info h4 {
+  color: var(--primary);
+}
+
+/* Thumbnail */
+.dropdown-img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+/* Text info */
+.dropdown-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dropdown-info h4 {
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.dropdown-info span {
+  color: var(--text-light);
+}
+
+/* Price badge */
+.dropdown-price {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Arrow hint */
+.dropdown-arrow {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-left: 4px;
+  transition: var(--transition);
+}
+
+.search-dropdown-item:hover .dropdown-arrow {
+  color: var(--primary);
+  transform: translateX(3px);
+}
+
+/* Divider between items */
+.search-dropdown-item + .search-dropdown-item {
+  border-top: 1px solid var(--border-light);
+}
+
+/* No results */
+.search-no-result {
+  padding: 1.6rem 1rem;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.88rem;
+}
+
+.search-no-result strong {
+  color: var(--text-dark);
+}
+
+/* ─── Animations ─── */
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 820px) {
+  .container {
+    padding-top: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .searchBar {
+    width: 92%;
+  }
+
+  .search-dropdown {
+    width: 92%;
+  }
+
+  .category-row {
+    gap: 6px;
+    padding: 0 1rem;
+  }
+
+  .category-button {
+    padding: 6px 13px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .searchBar {
+    width: 95%;
+  }
+
+  .search-dropdown {
+    width: 95%;
+  }
+
+  .search-pic {
+    padding: 0 16px;
+  }
+
+  .filter-icon-button {
+    padding: 0 14px;
+  }
+}

@@ -1,0 +1,179 @@
+.adt-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #fff;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #eef0f8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ── Search ── */
+.adt-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f6fa;
+  border: 1.5px solid #eef0f8;
+  border-radius: 10px;
+  padding: 7px 12px;
+  flex: 1;
+  max-width: 480px;
+  transition: border-color 0.2s;
+}
+
+.adt-search:focus-within {
+  border-color: #160053;
+  background: #fff;
+}
+
+.adt-search-icon { color: #9ca3af; flex-shrink: 0; }
+
+.adt-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  color: #1a1a2e;
+  min-width: 0;
+}
+
+.adt-search input::placeholder { color: #b0b6c3; }
+
+.adt-filter-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: color 0.2s;
+}
+
+.adt-filter-btn:hover { color: #160053; }
+
+/* ── Right side ── */
+.adt-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.adt-icon-btn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  border: 1.5px solid #eef0f8;
+  background: #fff;
+  color: #374151;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.adt-icon-btn:hover {
+  background: #f5f6fa;
+  border-color: #dde0f0;
+  color: #160053;
+}
+
+.adt-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #e74a3b;
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 700;
+  min-width: 15px;
+  height: 15px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  border: 1.5px solid #fff;
+}
+
+.adt-divider {
+  width: 1px;
+  height: 28px;
+  background: #eef0f8;
+  margin: 0 4px;
+}
+
+/* ── User ── */
+.adt-user {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.adt-user:hover { background: #f5f6fa; }
+
+.adt-avatar-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #160053;
+}
+
+.adt-avatar-placeholder {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #160053, #3b3b8f);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.adt-user-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.adt-user-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1;
+}
+
+.adt-user-role {
+  font-size: 0.68rem;
+  color: #9ca3af;
+  line-height: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .adt-bar {
+    padding: 0.65rem 1rem 0.65rem 64px; /* left padding clears the hamburger button */
+  }
+  .adt-user-text { display: none; }
+  .adt-divider { display: none; }
+}
+
+@media (max-width: 480px) {
+  .adt-search { max-width: unset; }
+}

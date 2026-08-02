@@ -1,0 +1,175 @@
+.footer {
+  background-color: #181a3d;
+  color: #ffffff;
+  padding: 56px 24px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 36px;
+}
+
+/* ── Brand column ─────────────────────────────────────────────────────────── */
+
+.brand-column h3 {
+  margin: 0 0 14px;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.62);
+  max-width: 260px;
+  margin: 0 0 22px;
+}
+
+/* ── Columns ──────────────────────────────────────────────────────────────── */
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.footer-column h3 {
+  letter-spacing: 4px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.footer-column h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.82);
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  width: fit-content;
+}
+
+.footer-column ul li:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+/* ── Social icons ─────────────────────────────────────────────────────────── */
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.social-icons a:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #13118a;
+}
+
+/* ── Bottom bar ───────────────────────────────────────────────────────────── */
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* ── Compact mobile bar (hidden by default) ──────────────────────────────── */
+
+.small-container {
+  display: none;
+}
+
+.small-brand {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  .brand-column {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 834px) {
+  .footer {
+    padding: 0;
+  }
+
+  #big-footer {
+    display: none;
+  }
+
+  .small-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 22px 20px;
+  }
+
+  .footer-bottom {
+    margin-top: 0;
+    padding: 14px 0 24px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .small-container {
+    padding: 18px 16px;
+  }
+
+  .social-icons a {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    padding: 12px 0 20px;
+  }
+}

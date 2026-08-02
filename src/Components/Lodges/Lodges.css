@@ -1,0 +1,189 @@
+/* AvailableHouses.css */
+.available-houses {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.houses-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 70px;
+}
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filter-buttons button {
+  border: 1px solid #13118a;
+  background-color: transparent;
+  color: #13118a;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #13118a;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.house-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.house-card:hover {
+  transform: translateY(-5px);
+}
+
+.house-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.house-info {
+  padding: 16px;
+}
+
+.house-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.house-category {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.house-rating {
+  color: #ff9500;
+  font-size: 16px;
+  font-weight: 500;
+}
+.house-rating .star {
+  font-size: 18px;
+  color: gold;
+  margin-right: 2px;
+}
+
+.house-rating .star.empty {
+  color: #ccc;
+}
+
+.house-rating .star.half {
+  position: relative;
+}
+
+.house-rating .star.half::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: gold;
+}
+.card-btn{
+  display: flex;
+  justify-content: flex-end;
+}
+.card-btn button{
+  border: none;
+  outline: none;
+  background-color: #13118a;
+  color: #fff;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+.card-btn button:hover{
+  transition: 0.6s;
+  opacity: 0.8;
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+.btn-container button{
+  border: none;
+   background-color: #13118a;
+  color: #fff;
+  outline: none;
+  padding: 15px 30px;
+  border-radius: 4px;
+}
+.btn-container button:hover{
+  transition: 0.6s;
+  opacity: 0.8;
+}
+#right-arrow{
+  position: relative;
+  top: 3px;
+}
+/* Responsive Design */
+@media (max-width: 884px) {
+  .houses-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 70px;
+}
+}
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .filter-buttons {
+    gap: 10px;
+  }
+
+  .filter-buttons button {
+    padding: 6px 14px; /* smaller padding */
+    font-size: 14px;
+  }
+}
+@media (max-width: 430px) {
+  .houses-grid {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 40px;
+}
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #222;
+}
+}
+/* @media (max-width: 400px) {
+  .filter-buttons button {
+    width: 100%;
+    text-align: center;
+  }
+} */

@@ -1,0 +1,248 @@
+.home-view {
+  background-color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+.filter-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.filter-buttons button{
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #13118a;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #13118a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-buttons button:hover{
+  background: #eef0fb;
+  color: #13118a;
+}
+
+.filter-buttons button.active{
+  background: #13118a;
+  color: white;
+}
+/* Scoped Swiper styles for ListingSwiper only */
+.home-swiper-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.home-swiper-wrapper .swiper {
+  padding-bottom: 40px;
+  border-radius: 14px;
+}
+
+.home-swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.home-swiper-wrapper .swiper-button-next,
+.home-swiper-wrapper .swiper-button-prev {
+  color: #13118a !important;
+  font-weight: bold !important;
+}
+
+.home-swiper-wrapper .swiper-pagination-bullet {
+  background-color: #13118a !important;
+}
+
+.home-swiper-wrapper .swiper-pagination-bullet-active {
+  background-color: #13118a !important;
+}
+
+/* .house-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(19, 17, 138, 0.08);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  width: 300px;
+} */
+
+.house-card:hover {
+  transform: translateY(-5px);
+}
+
+.house-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.house-info {
+  padding: 16px;
+}
+
+.house-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.house-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #444;
+}
+
+.house-amenities span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #333;
+}
+
+.house-amenities svg {
+  color: #13118a;
+  font-size: 14px;
+}
+
+
+.house-category {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.house-rating {
+  color: #ff9500;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.house-rating .star {
+  font-size: 18px;
+  color: gold;
+  margin-right: 2px;
+}
+
+.house-rating .star.empty {
+  color: #ccc;
+}
+
+.house-rating .star.half {
+  position: relative;
+}
+
+.house-rating .star.half::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: gold;
+}
+
+.card-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-btn button {
+  border: 1.5px solid #13118a;
+  outline: none;
+  background-color: #13118a;
+  color: #fff;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.card-btn button:hover {
+  transition: 0.6s;
+  opacity: 0.8;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.btn-container button {
+  border: 1px solid #13118a;
+  background-color: #13118a;
+  color: #fff;
+  outline: none;
+  padding: 15px 30px;
+  border-radius: 4px;
+}
+
+.btn-container button:hover {
+  transition: 0.6s;
+  opacity: 0.8;
+}
+
+#right-arrow {
+  position: relative;
+  top: 3px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .house-card {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .home-swiper-wrapper .swiper-button-next,
+.home-swiper-wrapper .swiper-button-prev {
+  display: none;
+}
+}
+
+@media (max-width: 390px) {
+  .section-title{
+    font-size: 24px;
+  }
+}
+
+/* ── Skeleton loading grid ───────────────────────────────────────────────── */
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 1024px) {
+  .skeleton-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+}

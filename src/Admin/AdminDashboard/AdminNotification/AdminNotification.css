@@ -1,0 +1,124 @@
+/* ===== Container ===== */
+.notifications-container {
+  background: #fff;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.notifications-header h2 {
+  color: #13118a;
+  font-size: 22px;
+}
+
+.notifications-header select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* ===== List ===== */
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notification-card {
+  display: flex;
+  align-items: center;
+  background: #f9f9ff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
+}
+
+.notification-card.unread {
+  border-left: 5px solid #13118a;
+}
+
+.notification-card.read {
+  opacity: 0.7;
+}
+
+.notification-icon {
+  font-size: 22px;
+  color: #13118a;
+  margin-right: 12px;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-message {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ===== Actions ===== */
+.notification-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.notification-actions button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.mark-btn {
+  background: #0b08b8;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #d90429;
+  color: #fff;
+}
+
+/* ===== No Notifications ===== */
+.no-notifications {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .notification-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .notification-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

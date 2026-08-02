@@ -1,0 +1,283 @@
+/* ── Page ────────────────────────────────────────────────────────────────────── */
+
+.mp-page {
+  min-height: 100vh;
+  background: #f4f6fb;
+  padding: 90px 16px 48px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.mp-container {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* ── Profile card ────────────────────────────────────────────────────────────── */
+
+.mp-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 36px 24px 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Avatar wrapper ──────────────────────────────────────────────────────────── */
+
+/* Outer wrapper holds both circle + badge so badge can sit outside */
+.mp-avatar-wrap {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin-bottom: 4px;   /* space for the badge that overflows the bottom */
+}
+
+/* The clickable circle */
+.mp-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #160053;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background: #dde0f0;
+  transition: border-color 0.2s;
+}
+
+.mp-avatar:hover,
+.mp-avatar:focus {
+  border-color: #2f2dc4;
+  outline: none;
+}
+
+.mp-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Initials fallback */
+.mp-avatar-initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #160053;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+/* ── Camera badge — ALWAYS visible ──────────────────────────────────────────── */
+/*
+   Sits at bottom-right of the wrapper, partially overlapping the circle.
+   This is the KEY fix — on mobile there's no hover, so the camera must
+   always be visible, not hidden behind an opacity:0 overlay.
+*/
+
+.mp-camera-badge {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #160053;
+  color: #fff;
+  border: 2.5px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(22, 0, 83, 0.35);
+  transition: background 0.18s, transform 0.18s;
+  z-index: 2;
+}
+
+.mp-camera-badge:hover {
+  background: #2f2dc4;
+  transform: scale(1.1);
+}
+
+.mp-camera-badge:active {
+  transform: scale(0.95);
+}
+
+/* ── Profile text ────────────────────────────────────────────────────────────── */
+
+.mp-name {
+  margin-top: 18px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #160053;
+  line-height: 1.2;
+}
+
+.mp-email {
+  margin-top: 5px;
+  font-size: 13.5px;
+  color: #888;
+}
+
+.mp-role-badge {
+  display: inline-block;
+  margin-top: 10px;
+  background: #160053;
+  color: #fff;
+  padding: 5px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+/* Small hint text below the badge */
+.mp-photo-hint {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* ── Sections ────────────────────────────────────────────────────────────────── */
+
+.mp-section {
+  margin-bottom: 20px;
+}
+
+.mp-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #999;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+/* Hide support section on desktop */
+@media (min-width: 555px) {
+  .mp-support {
+    display: none;
+  }
+}
+
+/* ── Link cards ──────────────────────────────────────────────────────────────── */
+
+.mp-link-card {
+  background: #fff;
+  padding: 15px 18px;
+  border-radius: 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.mp-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: #e8eaf5;
+}
+
+.mp-link-card:active {
+  transform: scale(0.99);
+}
+
+.mp-link-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mp-link-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f0f1f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #160053;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.mp-link-title {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #222;
+}
+
+.mp-link-arrow {
+  color: #ccc;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* ── Logout ──────────────────────────────────────────────────────────────────── */
+
+.mp-logout-btn {
+  width: 100%;
+  background: #fff5f5;
+  color: crimson;
+  border: 1.5px solid crimson;
+  padding: 15px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 4px;
+  transition: background 0.2s ease;
+  font-family: inherit;
+}
+
+.mp-logout-btn:hover {
+  background: #ffe3e3;
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .mp-card {
+    padding: 28px 16px 24px;
+  }
+
+  .mp-link-card {
+    padding: 14px 16px;
+  }
+
+  .mp-avatar-wrap,
+  .mp-avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .mp-name {
+    font-size: 19px;
+  }
+
+  .mp-camera-badge {
+    width: 30px;
+    height: 30px;
+    bottom: 1px;
+    right: 1px;
+  }
+}

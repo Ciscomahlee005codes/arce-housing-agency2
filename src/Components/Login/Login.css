@@ -1,0 +1,207 @@
+body {
+  overflow-x: hidden;
+}
+
+.auth-container {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.auth-image {
+  flex: 1;
+  background: url('/House-4.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.auth-form {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.auth-form.login-mode {
+  align-items: center;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.form-box h2 {
+  margin-bottom: 1.5rem;
+  color: #13118a;
+}
+
+.form-box input,
+.role-select {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-box input:focus,
+.role-select:focus {
+  border-color: #13118a;
+}
+
+.role-select {
+  background-color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* ── Password field with eye icon ── */
+.password-field {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.password-field input {
+  margin-bottom: 0;
+  padding-right: 2.8rem; /* make room for the icon */
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.toggle-password:hover {
+  color: #13118a;
+}
+
+/* ── Buttons ── */
+.primary-btn {
+  background-color: #13118a;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.3s ease, opacity 0.2s;
+  width: 100%;
+}
+
+.primary-btn:hover:not(:disabled) {
+  background-color: #0e0ba5;
+}
+
+.primary-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ── Text links ── */
+.form-box p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.form-box span {
+  color: #13118a;
+  font-weight: bold;
+}
+
+.forgot-link {
+  text-align: right;
+  color: #13118a;
+  font-size: 0.85rem;
+  margin-top: -0.25rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.forgot-link:hover {
+  color: #0e0ba5;
+  text-decoration: underline;
+}
+/* ── Logo Section ───────────────────────── */
+
+.auth-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -2.5rem;
+}
+
+.login-logo {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.login-logo:hover {
+  transform: scale(1.03);
+}
+
+/* Heading */
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 0.4rem;
+  color: #13118a;
+  font-size: 1.8rem;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.8rem;
+}
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .login-logo {
+    width: 140px;
+  }
+
+  .form-box h2 {
+    font-size: 1.5rem;
+  }
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-image {
+    height: 35vh;
+    flex: none;
+  }
+
+  .auth-form {
+    flex: 1;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+}

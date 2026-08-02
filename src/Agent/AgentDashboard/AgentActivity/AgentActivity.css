@@ -1,0 +1,124 @@
+.aa-section {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.aa-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  gap: 12px;
+}
+
+.aa-greeting {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #160053;
+  margin: 0 0 3px;
+}
+
+.aa-sub {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ── Grid ── */
+.aa-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* ── Card ── */
+.aa-card {
+  background: #fff;
+  border: 1px solid #eef0f8;
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-width: 0; /* allows grid children to shrink instead of overflowing */
+}
+
+.aa-card:hover {
+  box-shadow: 0 4px 16px rgba(22, 0, 83, 0.08);
+  transform: translateY(-2px);
+}
+
+.aa-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.aa-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.aa-trend {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.aa-trend-up   { background: #dcfce7; color: #16a34a; }
+.aa-trend-warn { background: #fef9c3; color: #b45309; }
+
+.aa-count {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 4px;
+}
+
+.aa-title {
+  font-size: 0.78rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+
+/* Tablet: 4 cols → 2 cols */
+@media (max-width: 900px) {
+  .aa-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Small tablet / large phone */
+@media (max-width: 640px) {
+  .aa-section { padding: 1.25rem 1rem 0; }
+  .aa-header { flex-direction: column; }
+  .aa-greeting { font-size: 1.1rem; }
+  .aa-grid { gap: 12px; }
+  .aa-card { padding: 1rem; }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  .aa-section { padding: 1rem 1rem 0; }
+  .aa-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .aa-card { padding: 0.9rem 0.85rem; }
+  .aa-icon-wrap { width: 34px; height: 34px; }
+  .aa-count { font-size: 1.5rem; }
+  .aa-title { font-size: 0.72rem; }
+  .aa-trend { font-size: 0.62rem; padding: 2px 6px; }
+}
+
+/* Very small phone — drop to single column so nothing feels cramped */
+@media (max-width: 360px) {
+  .aa-grid { grid-template-columns: 1fr; }
+  .aa-card { padding: 1rem; }
+  .aa-count { font-size: 1.7rem; }
+}

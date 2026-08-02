@@ -1,0 +1,46 @@
+.objectives{
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.objectives img{
+    width: 50%;
+}
+.obj-header h3{
+  color: rgb(3, 3, 138);
+  font-size: 24px;
+  font-weight: 600;
+  width: 65%;
+}
+.obj-header p{
+    width: 100%;
+}
+@media (max-width: 884px) {
+    .objectives{
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.objectives img{
+    width: 100%;
+}
+.obj-header h3{
+  color: rgb(3, 3, 138);
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+}
+}
+@media (max-width: 500px) {
+    .obj-header h3{
+  color: rgb(3, 3, 138);
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+}
+}

@@ -1,0 +1,16 @@
+.notification-layout {
+  display: flex;
+}
+
+.notification-content {
+  margin-left: 250px; /* same as sidebar width */
+  width: calc(100% - 250px);
+  padding: 0;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 820px) {
+  .notification-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

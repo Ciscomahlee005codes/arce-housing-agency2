@@ -1,0 +1,85 @@
+.about-container {
+  max-width: 950px;
+  margin: auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  padding-top: 3rem;
+   margin-top: 80px;
+   margin-bottom: 30px;
+}
+
+.about-title {
+  font-size: 30px;
+  color: #160053;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.about-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.about-section h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #160053;
+}
+
+.about-section p {
+  font-size: 16.5px;
+  line-height: 1.7;
+}
+.about-section ul{
+  margin-top: 20px;
+}
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 12px;
+}
+
+.about-list li {
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  color: #160053;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.about-footer {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 60px;
+  color: #160053;
+}
+
+.about-footer span {
+  font-weight: bold;
+}
+
+.about-footer em {
+  font-style: italic;
+}
+@media (max-width: 430px) {
+    .about-title {
+  font-size: 27px;
+  color: #160053;
+  text-align: center;
+  margin-bottom: 25px;
+}
+}

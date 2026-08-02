@@ -1,0 +1,139 @@
+.help-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #0f172a;
+}
+
+.help-container h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #475569;
+  font-size: 1rem;
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-bottom: 2rem;
+}
+
+.faq-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  background: #f8fafc;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.faq-answer {
+  padding: 1rem;
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Contact Support */
+.contact-support {
+  background: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.contact-support h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.contact-support ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-support li {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+
+/* Report Issue Form */
+.report-issue {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.report-issue h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.report-issue label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.report-issue input,
+.report-issue textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.submit-btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+}

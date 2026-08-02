@@ -1,0 +1,49 @@
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: #160053;
+  color: #fff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow: 0 4px 12px rgba(22, 0, 83, 0.3);
+
+  transition: 0.3s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  background: #24007a;
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 10px 15px;
+  }
+}
+/* Hide the main NavBar on mobile whenever a BackButton-bearing page is active */
+@media (max-width: 600px) {
+  body.has-back-button .arce-header {
+    display: none;
+  }
+  body.has-back-button .arce-bottom-nav {
+    display: none;
+  }
+}

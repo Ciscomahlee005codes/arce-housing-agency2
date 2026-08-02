@@ -1,0 +1,31 @@
+.v-container {
+  background-color: #ffffff;
+}
+.search {
+  background-color: #ffffff;
+  padding-top: 25px;
+}
+
+/* Align FindMySpace button to the right */
+.find-space-wrapper {
+  /* display: flex;
+  justify-content: center;
+  padding: 15px 25px;  */
+}
+
+.customer-service-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 999;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.customer-service-btn:hover {
+  transform: scale(1.1);
+}

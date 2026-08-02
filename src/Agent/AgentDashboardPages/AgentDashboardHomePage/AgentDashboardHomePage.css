@@ -1,0 +1,252 @@
+/* .dashboard2 { margin: 30px; } */
+.msg-layout {
+  display: flex;
+}
+.msg-content {
+  margin-left: 250px; /* same as sidebar width */
+  width: calc(100% - 250px);
+  padding: 0;
+  overflow-x: hidden;
+}
+.dashboard-container2 {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dash-loading {
+  padding: 60px;
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* ── Header ── */
+.dash-header { margin-bottom: 1.5rem; }
+
+.dash-header h2 {
+  margin: 0 0 3px;
+  color: #13118a;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.dash-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #8a8a9c;
+}
+
+/* ── Stat cards ── */
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.dash-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fafbff;
+  border: 1px solid #eef0fa;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.dash-stat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-tone-amber  { background: #fff3cd; color: #856404; }
+.dash-tone-blue   { background: #dbeafe; color: #1e3a8a; }
+.dash-tone-purple { background: #ede9fe; color: #6d28d9; }
+.dash-tone-green  { background: #e0f7e9; color: #2e7d32; }
+.dash-tone-navy   { background: #eef0fa; color: #13118a; }
+
+.dash-stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dash-stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #13118a;
+  line-height: 1.1;
+}
+
+.dash-stat-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.dash-stat-hint {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+/* ── Quick actions ── */
+.dash-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.75rem;
+}
+
+.dash-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1.5px solid #eef0fa;
+  border-radius: 12px;
+  background: #fff;
+  color: #13118a;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dash-action-btn:hover {
+  background: #13118a;
+  color: #fff;
+  border-color: #13118a;
+}
+
+.dash-action-arrow {
+  margin-left: 2px;
+  transition: transform 0.2s;
+}
+
+.dash-action-btn:hover .dash-action-arrow {
+  transform: translateX(3px);
+}
+
+/* ── Recent activity ── */
+.dash-recent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.dash-recent-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #13118a;
+}
+
+.dash-see-all {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #13118a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.dash-see-all:hover { text-decoration: underline; }
+
+.dash-recent-empty {
+  padding: 30px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  background: #fafbff;
+  border-radius: 12px;
+}
+
+.dash-recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dash-recent-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  background: #fafbff;
+  border-radius: 10px;
+  font-size: 0.84rem;
+}
+
+.dash-recent-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-recent-main strong {
+  color: #1a1a2e;
+  font-size: 0.86rem;
+}
+
+.dash-recent-sub {
+  font-size: 0.74rem;
+  color: #94a3b8;
+}
+
+.dash-recent-time {
+  font-size: 0.72rem;
+  color: #b0b3c6;
+  flex-shrink: 0;
+  min-width: 60px;
+  text-align: right;
+}
+.prop-con{
+  margin: auto;
+}
+/* ── Status pill ── */
+.dash-pill {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  flex-shrink: 0;
+}
+
+.dash-pill-approved    { background: #e0f7e9; color: #2e7d32; }
+.dash-pill-pending     { background: #fff3cd; color: #856404; }
+.dash-pill-rejected    { background: #fdecea; color: #c53030; }
+.dash-pill-rescheduled { background: #eef0fa; color: #13118a; }
+
+/* ══════════════════════
+   RESPONSIVE
+══════════════════════ */
+@media (max-width: 1080px) {
+  .dash-stats { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 820px) {
+  .msg-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .dash-stats { grid-template-columns: repeat(2, 1fr); }
+  .dash-recent-row { flex-wrap: wrap; }
+  .dash-recent-time { text-align: left; }
+}
+
+@media (max-width: 420px) {
+  .dash-stats { grid-template-columns: 1fr; }
+  .dash-action-btn { width: 100%; justify-content: center; }
+}
