@@ -1,5 +1,4 @@
 import React from 'react'
-import { house_List } from '../../../../house_List'
 import './AgentBrowseProperties.css'
 import { Swiper as ListingSwiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay } from 'swiper/modules'
