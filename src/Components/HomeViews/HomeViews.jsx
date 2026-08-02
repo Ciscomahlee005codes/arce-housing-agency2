@@ -3,7 +3,7 @@ import { fetchApprovedProperties } from '../../lib/fetchProperties';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import './HomeViews.css';
 import PropertyCard from '../PropertyCard/PropertyCard';
-import PropertyCardSkeleton from '../PropertyCard/PropertyCardSkeleton';
+import PropertyCardSkeleton from "../PropertyCard/Propertycardskeleton";
 
 import { Swiper as ListingSwiper, SwiperSlide } from 'swiper/react';
 
